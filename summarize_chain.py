@@ -9,6 +9,8 @@ from langchain.callbacks import get_openai_callback
 
 load_dotenv()
 
+# 文本摘要
+
 # define a function to load pdf
 def load_pdf(path):
     loader = UnstructuredFileLoader(path)
