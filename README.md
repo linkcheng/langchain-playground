@@ -5,12 +5,16 @@
 poetry install
 ```
 
-2. 修改 .env ，添加 api key
+2. 配置
+```sh
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+# 添加 openai api key
+```
 
 3. 运行
 ```sh
-poetry run python summarize_chain.py
+poetry run streamlit run app.py
 # or
 poetry shell
-python summarize_chain.py
+streamlit run app.py
 ```

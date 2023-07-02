@@ -7,7 +7,7 @@ readme = "README.md"
 packages = []
 
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = "3.9.0"
 langchain = "^0.0.212"
 # langchain = { git = "https://github.com/hwchase17/langchain.git", tag = "v0.0.212" }
 # langchain = { path = "../langchain/" }
@@ -17,7 +17,10 @@ unstructured = {extras = ["local-inference"], version = "^0.7.8"}
 beautifulsoup4 = "^4.12.2"
 python-dotenv = "^1.0.0"
 tiktoken = "^0.4.0"
+streamlit = "^1.24.0"
 
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.14.0"
 
 [build-system]
 requires = ["poetry-core"]
