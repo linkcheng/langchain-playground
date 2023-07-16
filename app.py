@@ -15,7 +15,7 @@ serpapi_api_key = st.secrets['serpapi_api_key']
 
 def load_vectordb():
     embedding = OpenAIEmbeddings(openai_api_key=openai_api_key)
-    vectordb = Chroma(persist_directory='.chroma', embedding_function=embedding)
+    vectordb = Chroma(persist_directory='./.chroma', embedding_function=embedding)
     return vectordb
 
 
@@ -52,7 +52,7 @@ def load_agent(llm, tools, vectordb):
 
 def run(agent, question):
     with get_openai_callback() as cb:
-        agent.run(["write a weather report for Paris today"])
+        agent.run([question])
         print(cb)
 
 def main():
