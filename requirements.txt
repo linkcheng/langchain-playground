@@ -1,0 +1,9 @@
+jupyter
+ray[air]==2.5.1
+pydantic==1.10.11
+python-dotenv
+openai
+tiktoken
+matplotlib
+plotly
+scikit-learn
